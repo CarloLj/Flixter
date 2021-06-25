@@ -28,6 +28,7 @@ The following **additional** features are implemented:
 
 * [X] Created style class that extends RecyclerView.ItemDecoration
 * [X] Resizable TextViews that adjust to users screen and reescalates. If something goes grong it has a ellipsize attribute
+* [X] Automatic full screen on play
 
 * List anything else that you can get done to improve the app functionality!
 * Filter API queries
