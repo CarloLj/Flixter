@@ -4,7 +4,7 @@
 
 Time spent: **13** hours spent in total
 * Time spent in requirements and bonuses: **6** hours
-* Time spent in UI design (learning and searching mostly): **7** hours
+* Time spent in UI design (mostly learning and searching): **7** hours
 
 ## User Stories
 
