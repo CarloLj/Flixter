@@ -1,8 +1,10 @@
 package com.carlolj.flixter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
@@ -34,7 +36,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
     TextView tvMovieOverview;
     ImageView ivBackdropImage;
     RatingBar rbMovieVoteAverage;
-
+    ConstraintLayout constraintLayout;
     String key = "";
 
     @Override
@@ -55,6 +57,12 @@ public class MovieDetailsActivity extends AppCompatActivity {
         tvMovieOverview = binding.tvMovieOverview;
         rbMovieVoteAverage = binding.rbVoteAverage;
         ivBackdropImage = binding.ivBackdropVideo;
+
+        constraintLayout = binding.content;
+        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();
 
         //Unwrap the movie passed via intent, using its simple name as a key
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));

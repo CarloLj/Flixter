@@ -1,13 +1,16 @@
 package com.carlolj.flixter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.carlolj.flixter.adapters.MovieAdapter;
 import com.carlolj.flixter.databinding.ActivityMainBinding;
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     List<Movie> movies;
 
     RecyclerView rvMovies;
+    RelativeLayout relativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
+        relativeLayout = binding.layout;
+        AnimationDrawable animationDrawable = (AnimationDrawable) relativeLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();
         //setContentView(R.layout.activity_main);
         //rvMovies = findViewById(R.id.rvMovies);
 
